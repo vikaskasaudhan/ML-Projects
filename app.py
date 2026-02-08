@@ -1,6 +1,12 @@
 import streamlit as st
 import pickle
 import requests
+
+st.set_page_config(
+    page_title="myapp",
+    page_icon="image.png",
+    layout="wide"
+)
 movie_list = pickle.load(open('movies.pkl', 'rb'))
 movie_titles = movie_list['title'].values
 
